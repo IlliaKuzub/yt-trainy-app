@@ -1,0 +1,168 @@
+
+<!-- saved from url=(0068)https://null.udemy.com/staticx/udemy/js/other-libs/jsbin/iframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./react-16.13.0.development.js.download"></script>
+<script src="./react-dom-16.13.0.development.js.download"></script>
+<script class="babelScript" src="./babel-7.8.7.min.js.download"></script><script src="./babel-plugin-remove-import-export-1.1.1-udemy.js.download"></script>
+<script src="./polyfill-7.4.0.min.js.download"></script>
+<script type="text/javascript">
+// this must run before any babel-compiled modules, so should probably
+// be the first script in your page
+window.exports = window;
+var require = (module) => {
+    if (module === "react") return React;
+    if (module === "react-dom") return ReactDOM;
+};
+var Component = React.Component;
+var PropTypes = React.PropTypes;
+</script>
+<script type="text/babel" data-presets="env,react">
+window.onload = function(e){
+    ReactDOM.render(<App name="Sara" />, document.getElementById('app'));
+}
+</script>
+<style></style><script>"use strict";
+
+window.onload = function (e) {
+  ReactDOM.render(React.createElement(App, {
+    name: "Sara"
+  }), document.getElementById('app'));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsid2luZG93Iiwib25sb2FkIiwiZSIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7QUFDQUEsTUFBTSxDQUFDQyxNQUFQLEdBQWdCLFVBQVNDLENBQVQsRUFBVztBQUN2QkMsRUFBQUEsUUFBUSxDQUFDQyxNQUFULENBQWdCLG9CQUFDLEdBQUQ7QUFBSyxJQUFBLElBQUksRUFBQztBQUFWLElBQWhCLEVBQXFDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBckM7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiXG53aW5kb3cub25sb2FkID0gZnVuY3Rpb24oZSl7XG4gICAgUmVhY3RET00ucmVuZGVyKDxBcHAgbmFtZT1cIlNhcmFcIiAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTtcbn1cbiJdfQ==</script><script>"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+// You don't need to change this file!
+// Take a look at 'validator.js' instead!
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return React.createElement("div", null, React.createElement(Validator, null), React.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      }));
+    }
+  }]);
+
+  return App;
+}(React.Component);
+
+var Validator = /*#__PURE__*/function (_React$Component2) {
+  _inherits(Validator, _React$Component2);
+
+  // State is being initialized in a slightly different way than is shown
+  // in the previous videos. You can ignore this different syntax for now.
+  function Validator(props) {
+    var _this;
+
+    _classCallCheck(this, Validator);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Validator).call(this, props));
+    _this.state = {
+      password: ''
+    };
+    return _this;
+  }
+
+  _createClass(Validator, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return React.createElement("div", {
+        className: "ui segment"
+      }, React.createElement("form", {
+        className: "ui form"
+      }, React.createElement("div", {
+        className: "field"
+      }, React.createElement("label", null, "Enter Password"), React.createElement("input", {
+        type: "password",
+        value: this.state.password,
+        onChange: function onChange(e) {
+          return _this2.setState({
+            password: e.target.value
+          });
+        }
+      })), this.state.password.length < 4 ? 'Password must be at least 4 characters' : ''));
+    }
+  }]);
+
+  return Validator;
+}(React.Component);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQgKDIpIl0sIm5hbWVzIjpbIkFwcCIsIlJlYWN0IiwiQ29tcG9uZW50IiwiVmFsaWRhdG9yIiwicHJvcHMiLCJzdGF0ZSIsInBhc3N3b3JkIiwiZSIsInNldFN0YXRlIiwidGFyZ2V0IiwidmFsdWUiLCJsZW5ndGgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7QUFDQTtJQUtNQSxHOzs7Ozs7Ozs7Ozs2QkFDSztBQUNQLGFBQ0ksaUNBQ0ksb0JBQUMsU0FBRCxPQURKLEVBRUk7QUFDRSxRQUFBLEdBQUcsRUFBQyxZQUROO0FBRUUsUUFBQSxJQUFJLEVBQUM7QUFGUCxRQUZKLENBREo7QUFTRDs7OztFQVhlQyxLQUFLLENBQUNDLFM7O0lBZ0JsQkMsUzs7O0FBQ0Y7QUFDQTtBQUNBLHFCQUFZQyxLQUFaLEVBQW1CO0FBQUE7O0FBQUE7O0FBQ2YsbUZBQU1BLEtBQU47QUFDQSxVQUFLQyxLQUFMLEdBQWE7QUFBRUMsTUFBQUEsUUFBUSxFQUFFO0FBQVosS0FBYjtBQUZlO0FBR2xCOzs7OzZCQUVRO0FBQUE7O0FBQ0wsYUFDSTtBQUFLLFFBQUEsU0FBUyxFQUFDO0FBQWYsU0FDSTtBQUFNLFFBQUEsU0FBUyxFQUFDO0FBQWhCLFNBQ0k7QUFBSyxRQUFBLFNBQVMsRUFBQztBQUFmLFNBQ0ksb0RBREosRUFFSTtBQUNJLFFBQUEsSUFBSSxFQUFDLFVBRFQ7QUFFSSxRQUFBLEtBQUssRUFBRSxLQUFLRCxLQUFMLENBQVdDLFFBRnRCO0FBR0ksUUFBQSxRQUFRLEVBQ0osa0JBQUNDLENBQUQ7QUFBQSxpQkFBTyxNQUFJLENBQUNDLFFBQUwsQ0FBYztBQUFFRixZQUFBQSxRQUFRLEVBQUVDLENBQUMsQ0FBQ0UsTUFBRixDQUFTQztBQUFyQixXQUFkLENBQVA7QUFBQTtBQUpSLFFBRkosQ0FESixFQVdLLEtBQUtMLEtBQUwsQ0FBV0MsUUFBWCxDQUFvQkssTUFBcEIsR0FBNkIsQ0FBN0IsR0FBaUMsd0NBQWpDLEdBQTRFLEVBWGpGLENBREosQ0FESjtBQWlCSDs7OztFQTFCbUJWLEtBQUssQ0FBQ0MsUyIsInNvdXJjZXNDb250ZW50IjpbIi8vIFlvdSBkb24ndCBuZWVkIHRvIGNoYW5nZSB0aGlzIGZpbGUhXG4vLyBUYWtlIGEgbG9vayBhdCAndmFsaWRhdG9yLmpzJyBpbnN0ZWFkIVxuXG5cblxuXG5jbGFzcyBBcHAgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxWYWxpZGF0b3IgLz5cbiAgICAgICAgICAgIDxsaW5rXG4gICAgICAgICAgICAgIHJlbD1cInN0eWxlc2hlZXRcIlxuICAgICAgICAgICAgICBocmVmPVwiaHR0cHM6Ly9jZG5qcy5jbG91ZGZsYXJlLmNvbS9hamF4L2xpYnMvc2VtYW50aWMtdWkvMi40LjEvc2VtYW50aWMubWluLmNzc1wiXG4gICAgICAgICAgICAvPlxuICAgICAgICA8L2Rpdj5cbiAgICApO1xuICB9XG59XG5cblxuXG5jbGFzcyBWYWxpZGF0b3IgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuICAgIC8vIFN0YXRlIGlzIGJlaW5nIGluaXRpYWxpemVkIGluIGEgc2xpZ2h0bHkgZGlmZmVyZW50IHdheSB0aGFuIGlzIHNob3duXG4gICAgLy8gaW4gdGhlIHByZXZpb3VzIHZpZGVvcy4gWW91IGNhbiBpZ25vcmUgdGhpcyBkaWZmZXJlbnQgc3ludGF4IGZvciBub3cuXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcbiAgICAgICAgc3VwZXIocHJvcHMpO1xuICAgICAgICB0aGlzLnN0YXRlID0geyBwYXNzd29yZDogJycgfTtcbiAgICB9XG4gICAgXG4gICAgcmVuZGVyKCkge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ1aSBzZWdtZW50XCI+XG4gICAgICAgICAgICAgICAgPGZvcm0gY2xhc3NOYW1lPVwidWkgZm9ybVwiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZpZWxkXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8bGFiZWw+RW50ZXIgUGFzc3dvcmQ8L2xhYmVsPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGlucHV0IFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHR5cGU9XCJwYXNzd29yZFwiXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e3RoaXMuc3RhdGUucGFzc3dvcmR9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9e1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAoZSkgPT4gdGhpcy5zZXRTdGF0ZSh7IHBhc3N3b3JkOiBlLnRhcmdldC52YWx1ZSB9KVxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICB7dGhpcy5zdGF0ZS5wYXNzd29yZC5sZW5ndGggPCA0ID8gJ1Bhc3N3b3JkIG11c3QgYmUgYXQgbGVhc3QgNCBjaGFyYWN0ZXJzJyA6ICcnfVxuICAgICAgICAgICAgICAgIDwvZm9ybT5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICApO1xuICAgIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgVmFsaWRhdG9yOyJdfQ==</script></head><body><div id="app"><div><div class="ui segment"><form class="ui form"><div class="field"><label>Enter Password</label><input type="password" value=""></div>Password must be at least 4 characters</form></div><link rel="stylesheet" href="./semantic.min.css"></div></div>
+<script type="text/babel" data-presets="env,react" data-plugins="remove-import-export">// You don't need to change this file!
+// Take a look at 'validator.js' instead!
+
+
+
+
+class App extends React.Component {
+  render() {
+    return (
+        <div>
+            <Validator />
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+            />
+        </div>
+    );
+  }
+}
+
+
+
+class Validator extends React.Component {
+    // State is being initialized in a slightly different way than is shown
+    // in the previous videos. You can ignore this different syntax for now.
+    constructor(props) {
+        super(props);
+        this.state = { password: '' };
+    }
+    
+    render() {
+        return (
+            <div className="ui segment">
+                <form className="ui form">
+                    <div className="field">
+                        <label>Enter Password</label>
+                        <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange={
+                                (e) => this.setState({ password: e.target.value })
+                            }
+                        />
+                    </div>
+                    {this.state.password.length < 4 ? 'Password must be at least 4 characters' : ''}
+                </form>
+            </div>
+        );
+    }
+}
+
+export default Validator;</script></body></html>

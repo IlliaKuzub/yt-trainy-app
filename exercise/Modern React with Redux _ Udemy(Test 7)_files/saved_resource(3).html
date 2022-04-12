@@ -1,0 +1,113 @@
+
+<!-- saved from url=(0068)https://null.udemy.com/staticx/udemy/js/other-libs/jsbin/iframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./react-16.13.0.development.js.download"></script>
+<script src="./react-dom-16.13.0.development.js.download"></script>
+<script class="babelScript" src="./babel-7.8.7.min.js.download"></script><script src="./babel-plugin-remove-import-export-1.1.1-udemy.js.download"></script>
+<script src="./polyfill-7.4.0.min.js.download"></script>
+<script type="text/javascript">
+// this must run before any babel-compiled modules, so should probably
+// be the first script in your page
+window.exports = window;
+var require = (module) => {
+    if (module === "react") return React;
+    if (module === "react-dom") return ReactDOM;
+};
+var Component = React.Component;
+var PropTypes = React.PropTypes;
+</script>
+<script type="text/babel" data-presets="env,react">
+window.onload = function(e){
+    ReactDOM.render(<App name="Sara" />, document.getElementById('app'));
+}
+</script>
+<style></style><script>"use strict";
+
+window.onload = function (e) {
+  ReactDOM.render(React.createElement(App, {
+    name: "Sara"
+  }), document.getElementById('app'));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsid2luZG93Iiwib25sb2FkIiwiZSIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7QUFDQUEsTUFBTSxDQUFDQyxNQUFQLEdBQWdCLFVBQVNDLENBQVQsRUFBVztBQUN2QkMsRUFBQUEsUUFBUSxDQUFDQyxNQUFULENBQWdCLG9CQUFDLEdBQUQ7QUFBSyxJQUFBLElBQUksRUFBQztBQUFWLElBQWhCLEVBQXFDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBckM7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiXG53aW5kb3cub25sb2FkID0gZnVuY3Rpb24oZSl7XG4gICAgUmVhY3RET00ucmVuZGVyKDxBcHAgbmFtZT1cIlNhcmFcIiAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTtcbn1cbiJdfQ==</script><script>"use strict";
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var users = [{
+  id: 1,
+  name: 'Leanne Graham'
+}, {
+  id: 2,
+  name: 'Ervin Howell'
+}, {
+  id: 3,
+  name: 'Clementine Bauch'
+}, {
+  id: 4,
+  name: 'Patricia Lebsack'
+}];
+
+var App = /*#__PURE__*/function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      var li = users.map(function (_ref) {
+        var name = _ref.name,
+            id = _ref.id;
+        return React.createElement("li", {
+          key: id
+        }, name);
+      });
+      return React.createElement("ul", null, li);
+    }
+  }]);
+
+  return App;
+}(React.Component);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQgKDIpIl0sIm5hbWVzIjpbInVzZXJzIiwiaWQiLCJuYW1lIiwiQXBwIiwibGkiLCJtYXAiLCJSZWFjdCIsIkNvbXBvbmVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFFQSxJQUFNQSxLQUFLLEdBQUcsQ0FDWjtBQUFFQyxFQUFBQSxFQUFFLEVBQUUsQ0FBTjtBQUFTQyxFQUFBQSxJQUFJLEVBQUU7QUFBZixDQURZLEVBRVo7QUFBRUQsRUFBQUEsRUFBRSxFQUFFLENBQU47QUFBU0MsRUFBQUEsSUFBSSxFQUFFO0FBQWYsQ0FGWSxFQUdaO0FBQUVELEVBQUFBLEVBQUUsRUFBRSxDQUFOO0FBQVNDLEVBQUFBLElBQUksRUFBRTtBQUFmLENBSFksRUFJWjtBQUFFRCxFQUFBQSxFQUFFLEVBQUUsQ0FBTjtBQUFTQyxFQUFBQSxJQUFJLEVBQUU7QUFBZixDQUpZLENBQWQ7O0lBT01DLEc7Ozs7Ozs7Ozs7OzZCQUVLO0FBQ1AsVUFBTUMsRUFBRSxHQUFHSixLQUFLLENBQUNLLEdBQU4sQ0FBVSxnQkFBaUI7QUFBQSxZQUFkSCxJQUFjLFFBQWRBLElBQWM7QUFBQSxZQUFSRCxFQUFRLFFBQVJBLEVBQVE7QUFDbEMsZUFBTztBQUFJLFVBQUEsR0FBRyxFQUFFQTtBQUFULFdBQWNDLElBQWQsQ0FBUDtBQUNILE9BRlUsQ0FBWDtBQUlBLGFBQ0ksZ0NBQ0tFLEVBREwsQ0FESjtBQUtEOzs7O0VBWmVFLEtBQUssQ0FBQ0MsUyIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5jb25zdCB1c2VycyA9IFtcbiAgeyBpZDogMSwgbmFtZTogJ0xlYW5uZSBHcmFoYW0nIH0sXG4gIHsgaWQ6IDIsIG5hbWU6ICdFcnZpbiBIb3dlbGwnIH0sXG4gIHsgaWQ6IDMsIG5hbWU6ICdDbGVtZW50aW5lIEJhdWNoJyB9LFxuICB7IGlkOiA0LCBuYW1lOiAnUGF0cmljaWEgTGVic2FjaycgfVxuXTtcblxuY2xhc3MgQXBwIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcbiAgICBcbiAgcmVuZGVyKCkge1xuICAgIGNvbnN0IGxpID0gdXNlcnMubWFwKCh7IG5hbWUsIGlkfSkgPT4ge1xuICAgICAgICByZXR1cm4gPGxpIGtleT17aWR9PntuYW1lfTwvbGk+XG4gICAgfSk7XG5cbiAgICByZXR1cm4gKFxuICAgICAgICA8dWw+XG4gICAgICAgICAgICB7bGl9XG4gICAgICAgIDwvdWw+XG4gICAgKTtcbiAgfVxufVxuIl19</script></head><body><div id="app"><ul><li>Leanne Graham</li><li>Ervin Howell</li><li>Clementine Bauch</li><li>Patricia Lebsack</li></ul></div>
+<script type="text/babel" data-presets="env,react" data-plugins="remove-import-export">
+
+const users = [
+  { id: 1, name: 'Leanne Graham' },
+  { id: 2, name: 'Ervin Howell' },
+  { id: 3, name: 'Clementine Bauch' },
+  { id: 4, name: 'Patricia Lebsack' }
+];
+
+class App extends React.Component {
+    
+  render() {
+    const li = users.map(({ name, id}) => {
+        return <li key={id}>{name}</li>
+    });
+
+    return (
+        <ul>
+            {li}
+        </ul>
+    );
+  }
+}
+</script></body></html>
