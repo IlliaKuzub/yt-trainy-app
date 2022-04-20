@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0068)https://null.udemy.com/staticx/udemy/js/other-libs/jsbin/iframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./react-16.13.0.development.js.download"></script>
+<script src="./react-dom-16.13.0.development.js.download"></script>
+<script class="babelScript" src="./babel-7.8.7.min.js.download"></script><script src="./babel-plugin-remove-import-export-1.1.1-udemy.js.download"></script>
+<script src="./polyfill-7.4.0.min.js.download"></script>
+<script type="text/javascript">
+// this must run before any babel-compiled modules, so should probably
+// be the first script in your page
+window.exports = window;
+var require = (module) => {
+    if (module === "react") return React;
+    if (module === "react-dom") return ReactDOM;
+};
+var Component = React.Component;
+var PropTypes = React.PropTypes;
+</script>
+<script type="text/babel" data-presets="env,react">
+window.onload = function(e){
+    ReactDOM.render(<App name="Sara" />, document.getElementById('app'));
+}
+</script>
+<style></style><script>"use strict";
+
+window.onload = function (e) {
+  ReactDOM.render(React.createElement(App, {
+    name: "Sara"
+  }), document.getElementById('app'));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsid2luZG93Iiwib25sb2FkIiwiZSIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7QUFDQUEsTUFBTSxDQUFDQyxNQUFQLEdBQWdCLFVBQVNDLENBQVQsRUFBVztBQUN2QkMsRUFBQUEsUUFBUSxDQUFDQyxNQUFULENBQWdCLG9CQUFDLEdBQUQ7QUFBSyxJQUFBLElBQUksRUFBQztBQUFWLElBQWhCLEVBQXFDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBckM7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiXG53aW5kb3cub25sb2FkID0gZnVuY3Rpb24oZSl7XG4gICAgUmVhY3RET00ucmVuZGVyKDxBcHAgbmFtZT1cIlNhcmFcIiAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTtcbn1cbiJdfQ==</script><script>"use strict";
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+// Don't modify this line. It is here to make React
+// work correctly in this exercise environment.
+var useState = React.useState; // don't change the Component name "App"
+
+function App() {
+  var _useState = useState(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      count = _useState2[0],
+      setCount = _useState2[1];
+
+  var onButtonClick = function onButtonClick() {
+    setCount(count + 1);
+  };
+
+  return React.createElement("div", null, React.createElement("button", {
+    onClick: onButtonClick
+  }, "Click Me!"), React.createElement("h1", null, "Current Count: ", count));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQgKDIpIl0sIm5hbWVzIjpbInVzZVN0YXRlIiwiUmVhY3QiLCJBcHAiLCJjb3VudCIsInNldENvdW50Iiwib25CdXR0b25DbGljayJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUNBO0FBQ0E7QUFDQSxJQUFNQSxRQUFRLEdBQUdDLEtBQUssQ0FBQ0QsUUFBdkIsQyxDQUVBOztBQUNBLFNBQVNFLEdBQVQsR0FBZTtBQUFBLGtCQUNlRixRQUFRLENBQUMsQ0FBRCxDQUR2QjtBQUFBO0FBQUEsTUFDSkcsS0FESTtBQUFBLE1BQ0dDLFFBREg7O0FBR1gsTUFBTUMsYUFBYSxHQUFHLFNBQWhCQSxhQUFnQixHQUFNO0FBQ3hCRCxJQUFBQSxRQUFRLENBQUNELEtBQUssR0FBRyxDQUFULENBQVI7QUFFSCxHQUhEOztBQUtBLFNBQ0ksaUNBQ0k7QUFBUSxJQUFBLE9BQU8sRUFBRUU7QUFBakIsaUJBREosRUFHSSxtREFBb0JGLEtBQXBCLENBSEosQ0FESjtBQU9IIiwic291cmNlc0NvbnRlbnQiOlsiXG4vLyBEb24ndCBtb2RpZnkgdGhpcyBsaW5lLiBJdCBpcyBoZXJlIHRvIG1ha2UgUmVhY3Rcbi8vIHdvcmsgY29ycmVjdGx5IGluIHRoaXMgZXhlcmNpc2UgZW52aXJvbm1lbnQuXG5jb25zdCB1c2VTdGF0ZSA9IFJlYWN0LnVzZVN0YXRlO1xuXG4vLyBkb24ndCBjaGFuZ2UgdGhlIENvbXBvbmVudCBuYW1lIFwiQXBwXCJcbmZ1bmN0aW9uIEFwcCgpIHtcbiAgICBjb25zdCBbY291bnQsIHNldENvdW50XSA9IHVzZVN0YXRlKDApOyBcbiAgICBcbiAgICBjb25zdCBvbkJ1dHRvbkNsaWNrID0gKCkgPT4ge1xuICAgICAgICBzZXRDb3VudChjb3VudCArIDEpO1xuICAgICAgICBcbiAgICB9O1xuICAgIFxuICAgIHJldHVybiAoXG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9e29uQnV0dG9uQ2xpY2t9PkNsaWNrIE1lITwvYnV0dG9uPlxuICAgICAgICAgICAgXG4gICAgICAgICAgICA8aDE+Q3VycmVudCBDb3VudDoge2NvdW50fTwvaDE+XG4gICAgICAgIDwvZGl2PlxuICAgICk7XG59Il19</script></head><body><div id="app"><div><button>Click Me!</button><h1>Current Count: 23</h1></div></div>
+<script type="text/babel" data-presets="env,react" data-plugins="remove-import-export">
+// Don't modify this line. It is here to make React
+// work correctly in this exercise environment.
+const useState = React.useState;
+
+// don't change the Component name "App"
+function App() {
+    const [count, setCount] = useState(0); 
+    
+    const onButtonClick = () => {
+        setCount(count + 1);
+        
+    };
+    
+    return (
+        <div>
+            <button onClick={onButtonClick}>Click Me!</button>
+            
+            <h1>Current Count: {count}</h1>
+        </div>
+    );
+}</script></body></html>

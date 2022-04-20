@@ -1,0 +1,148 @@
+
+<!-- saved from url=(0068)https://null.udemy.com/staticx/udemy/js/other-libs/jsbin/iframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./react-16.13.0.development.js.download"></script>
+<script src="./react-dom-16.13.0.development.js.download"></script>
+<script class="babelScript" src="./babel-7.8.7.min.js.download"></script><script src="./babel-plugin-remove-import-export-1.1.1-udemy.js.download"></script>
+<script src="./polyfill-7.4.0.min.js.download"></script>
+<script type="text/javascript">
+// this must run before any babel-compiled modules, so should probably
+// be the first script in your page
+window.exports = window;
+var require = (module) => {
+    if (module === "react") return React;
+    if (module === "react-dom") return ReactDOM;
+};
+var Component = React.Component;
+var PropTypes = React.PropTypes;
+</script>
+<script type="text/babel" data-presets="env,react">
+window.onload = function(e){
+    ReactDOM.render(<App name="Sara" />, document.getElementById('app'));
+}
+</script>
+<style></style><script>"use strict";
+
+window.onload = function (e) {
+  ReactDOM.render(React.createElement(App, {
+    name: "Sara"
+  }), document.getElementById('app'));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsid2luZG93Iiwib25sb2FkIiwiZSIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7QUFDQUEsTUFBTSxDQUFDQyxNQUFQLEdBQWdCLFVBQVNDLENBQVQsRUFBVztBQUN2QkMsRUFBQUEsUUFBUSxDQUFDQyxNQUFULENBQWdCLG9CQUFDLEdBQUQ7QUFBSyxJQUFBLElBQUksRUFBQztBQUFWLElBQWhCLEVBQXFDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBckM7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiXG53aW5kb3cub25sb2FkID0gZnVuY3Rpb24oZSl7XG4gICAgUmVhY3RET00ucmVuZGVyKDxBcHAgbmFtZT1cIlNhcmFcIiAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTtcbn1cbiJdfQ==</script><script>"use strict";
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var _React = React,
+    useState = _React.useState,
+    useEffect = _React.useEffect;
+var URL = 'https://jsonplaceholder.typicode.com/users';
+
+var App = function App() {
+  var _useState = useState([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      users = _useState2[0],
+      setUsers = _useState2[1];
+
+  useEffect(function () {
+    var doList = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        var _ref2, data;
+
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.get(URL);
+
+              case 2:
+                _ref2 = _context.sent;
+                data = _ref2.data;
+                setUsers(data);
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function doList() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    doList();
+  }, []);
+  var renderedUsers = users.map(function (user) {
+    return React.createElement("li", {
+      key: user.id
+    }, user.name);
+  });
+  return React.createElement("ul", null, renderedUsers);
+};
+
+// You do not need to make any changes to this file
+var axios = {
+  get: function get(url) {
+    return fetch(url).then(function (res) {
+      return res.json();
+    }).then(function (d) {
+      return {
+        data: d
+      };
+    });
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQgKDIpIl0sIm5hbWVzIjpbIlJlYWN0IiwidXNlU3RhdGUiLCJ1c2VFZmZlY3QiLCJVUkwiLCJBcHAiLCJ1c2VycyIsInNldFVzZXJzIiwiZG9MaXN0IiwiYXhpb3MiLCJnZXQiLCJkYXRhIiwicmVuZGVyZWRVc2VycyIsIm1hcCIsInVzZXIiLCJpZCIsIm5hbWUiLCJ1cmwiLCJmZXRjaCIsInRoZW4iLCJyZXMiLCJqc29uIiwiZCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7YUFFZ0NBLEs7SUFBeEJDLFEsVUFBQUEsUTtJQUFVQyxTLFVBQUFBLFM7QUFFbEIsSUFBTUMsR0FBRyxHQUFHLDRDQUFaOztBQUVBLElBQU1DLEdBQUcsR0FBRyxTQUFOQSxHQUFNLEdBQU07QUFBQSxrQkFDWUgsUUFBUSxDQUFDLEVBQUQsQ0FEcEI7QUFBQTtBQUFBLE1BQ1BJLEtBRE87QUFBQSxNQUNBQyxRQURBOztBQUdkSixFQUFBQSxTQUFTLENBQUMsWUFBTTtBQUNaLFFBQU1LLE1BQU07QUFBQSx5RUFBRztBQUFBOztBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFDWUMsS0FBSyxDQUFDQyxHQUFOLENBQVVOLEdBQVYsQ0FEWjs7QUFBQTtBQUFBO0FBQ0hPLGdCQUFBQSxJQURHLFNBQ0hBLElBREc7QUFFSEosZ0JBQUFBLFFBQVEsQ0FBQ0ksSUFBRCxDQUFSOztBQUZHO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLE9BQUg7O0FBQUEsc0JBQU5ILE1BQU07QUFBQTtBQUFBO0FBQUEsT0FBWjs7QUFJQUEsSUFBQUEsTUFBTTtBQUVULEdBUFEsRUFPTixFQVBNLENBQVQ7QUFTQSxNQUFNSSxhQUFhLEdBQUdOLEtBQUssQ0FBQ08sR0FBTixDQUFVLFVBQUNDLElBQUQsRUFBVTtBQUN0QyxXQUFPO0FBQUksTUFBQSxHQUFHLEVBQUVBLElBQUksQ0FBQ0M7QUFBZCxPQUFtQkQsSUFBSSxDQUFDRSxJQUF4QixDQUFQO0FBQ0gsR0FGcUIsQ0FBdEI7QUFJQSxTQUNJLGdDQUNLSixhQURMLENBREo7QUFLSCxDQXJCRDs7QUF5QkE7QUFDQSxJQUFNSCxLQUFLLEdBQUc7QUFDVkMsRUFBQUEsR0FEVSxlQUNOTyxHQURNLEVBQ0Q7QUFDTCxXQUFPQyxLQUFLLENBQUNELEdBQUQsQ0FBTCxDQUNGRSxJQURFLENBQ0csVUFBQUMsR0FBRztBQUFBLGFBQUlBLEdBQUcsQ0FBQ0MsSUFBSixFQUFKO0FBQUEsS0FETixFQUVGRixJQUZFLENBRUcsVUFBQUcsQ0FBQztBQUFBLGFBQUs7QUFBRVgsUUFBQUEsSUFBSSxFQUFFVztBQUFSLE9BQUw7QUFBQSxLQUZKLENBQVA7QUFHSDtBQUxTLENBQWQiLCJzb3VyY2VzQ29udGVudCI6WyJcblxuY29uc3QgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gPSBSZWFjdDtcblxuY29uc3QgVVJMID0gJ2h0dHBzOi8vanNvbnBsYWNlaG9sZGVyLnR5cGljb2RlLmNvbS91c2Vycyc7XG5cbmNvbnN0IEFwcCA9ICgpID0+IHtcbiAgICBjb25zdCBbdXNlcnMsIHNldFVzZXJzXSA9IHVzZVN0YXRlKFtdKTtcbiAgICBcbiAgICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgICAgICBjb25zdCBkb0xpc3QgPSBhc3luYyAoKSA9PiB7XG4gICAgICAgICAgICBjb25zdCB7IGRhdGEgfSA9IGF3YWl0IGF4aW9zLmdldChVUkwpO1xuICAgICAgICAgICAgICAgICAgICBzZXRVc2VycyhkYXRhKTtcbiAgICAgICAgfTtcbiAgICAgICAgZG9MaXN0KClcblxuICAgIH0sIFtdKTtcbiAgICAgXG4gICAgY29uc3QgcmVuZGVyZWRVc2VycyA9IHVzZXJzLm1hcCgodXNlcikgPT4ge1xuICAgICAgICByZXR1cm4gPGxpIGtleT17dXNlci5pZH0+e3VzZXIubmFtZX08L2xpPjtcbiAgICB9KTtcbiAgICBcbiAgICByZXR1cm4gKFxuICAgICAgICA8dWw+XG4gICAgICAgICAgICB7cmVuZGVyZWRVc2Vyc31cbiAgICAgICAgPC91bD5cbiAgICApO1xufVxuXG5leHBvcnQgZGVmYXVsdCBBcHA7XG5cbi8vIFlvdSBkbyBub3QgbmVlZCB0byBtYWtlIGFueSBjaGFuZ2VzIHRvIHRoaXMgZmlsZVxuY29uc3QgYXhpb3MgPSB7XG4gICAgZ2V0KHVybCkge1xuICAgICAgICByZXR1cm4gZmV0Y2godXJsKVxuICAgICAgICAgICAgLnRoZW4ocmVzID0+IHJlcy5qc29uKCkpXG4gICAgICAgICAgICAudGhlbihkID0+ICh7IGRhdGE6IGQgfSkpO1xuICAgIH1cbn1cblxuZXhwb3J0IHsgYXhpb3MgfTsiXX0=</script></head><body><div id="app"><ul><li>Leanne Graham</li><li>Ervin Howell</li><li>Clementine Bauch</li><li>Patricia Lebsack</li><li>Chelsey Dietrich</li><li>Mrs. Dennis Schulist</li><li>Kurtis Weissnat</li><li>Nicholas Runolfsdottir V</li><li>Glenna Reichert</li><li>Clementina DuBuque</li></ul></div>
+<script type="text/babel" data-presets="env,react" data-plugins="remove-import-export">
+
+const { useState, useEffect } = React;
+
+const URL = 'https://jsonplaceholder.typicode.com/users';
+
+const App = () => {
+    const [users, setUsers] = useState([]);
+    
+    useEffect(() => {
+        const doList = async () => {
+            const { data } = await axios.get(URL);
+                    setUsers(data);
+        };
+        doList()
+
+    }, []);
+     
+    const renderedUsers = users.map((user) => {
+        return <li key={user.id}>{user.name}</li>;
+    });
+    
+    return (
+        <ul>
+            {renderedUsers}
+        </ul>
+    );
+}
+
+export default App;
+
+// You do not need to make any changes to this file
+const axios = {
+    get(url) {
+        return fetch(url)
+            .then(res => res.json())
+            .then(d => ({ data: d }));
+    }
+}
+
+export { axios };</script></body></html>
