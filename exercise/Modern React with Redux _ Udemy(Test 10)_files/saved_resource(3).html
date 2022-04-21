@@ -1,0 +1,109 @@
+
+<!-- saved from url=(0068)https://null.udemy.com/staticx/udemy/js/other-libs/jsbin/iframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./react-16.13.0.development.js.download"></script>
+<script src="./react-dom-16.13.0.development.js.download"></script>
+<script class="babelScript" src="./babel-7.8.7.min.js.download"></script><script src="./babel-plugin-remove-import-export-1.1.1-udemy.js.download"></script>
+<script src="./polyfill-7.4.0.min.js.download"></script>
+<script type="text/javascript">
+// this must run before any babel-compiled modules, so should probably
+// be the first script in your page
+window.exports = window;
+var require = (module) => {
+    if (module === "react") return React;
+    if (module === "react-dom") return ReactDOM;
+};
+var Component = React.Component;
+var PropTypes = React.PropTypes;
+</script>
+<script type="text/babel" data-presets="env,react">
+window.onload = function(e){
+    ReactDOM.render(<App name="Sara" />, document.getElementById('app'));
+}
+</script>
+<style></style><script>"use strict";
+
+window.onload = function (e) {
+  ReactDOM.render(React.createElement(App, {
+    name: "Sara"
+  }), document.getElementById('app'));
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQiXSwibmFtZXMiOlsid2luZG93Iiwib25sb2FkIiwiZSIsIlJlYWN0RE9NIiwicmVuZGVyIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCJdLCJtYXBwaW5ncyI6Ijs7QUFDQUEsTUFBTSxDQUFDQyxNQUFQLEdBQWdCLFVBQVNDLENBQVQsRUFBVztBQUN2QkMsRUFBQUEsUUFBUSxDQUFDQyxNQUFULENBQWdCLG9CQUFDLEdBQUQ7QUFBSyxJQUFBLElBQUksRUFBQztBQUFWLElBQWhCLEVBQXFDQyxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsS0FBeEIsQ0FBckM7QUFDSCxDQUZEIiwic291cmNlc0NvbnRlbnQiOlsiXG53aW5kb3cub25sb2FkID0gZnVuY3Rpb24oZSl7XG4gICAgUmVhY3RET00ucmVuZGVyKDxBcHAgbmFtZT1cIlNhcmFcIiAvPiwgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2FwcCcpKTtcbn1cbiJdfQ==</script><script>"use strict";
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function App() {
+  var posts = usePosts();
+  var renderedPosts = posts.map(function (post) {
+    return React.createElement("li", {
+      key: post.id
+    }, post.title);
+  });
+  return React.createElement("div", null, React.createElement("h3", null, "Posts"), React.createElement("ul", null, renderedPosts));
+}
+
+;
+var _React = React,
+    useState = _React.useState,
+    useEffect = _React.useEffect;
+
+var usePosts = function usePosts() {
+  var _useState = useState([]),
+      _useState2 = _slicedToArray(_useState, 2),
+      posts = _useState2[0],
+      setPosts = _useState2[1];
+
+  useEffect(function () {
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      "mode": "cors",
+      "credentials": "omit"
+    }).then(function (res) {
+      return res.json();
+    }).then(function (data) {
+      return setPosts(data);
+    });
+  }, []);
+  return posts;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIklubGluZSBCYWJlbCBzY3JpcHQgKDIpIl0sIm5hbWVzIjpbIkFwcCIsInBvc3RzIiwidXNlUG9zdHMiLCJyZW5kZXJlZFBvc3RzIiwibWFwIiwicG9zdCIsImlkIiwidGl0bGUiLCJSZWFjdCIsInVzZVN0YXRlIiwidXNlRWZmZWN0Iiwic2V0UG9zdHMiLCJmZXRjaCIsInRoZW4iLCJyZXMiLCJqc29uIiwiZGF0YSJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUdBLFNBQVNBLEdBQVQsR0FBZTtBQUNYLE1BQU1DLEtBQUssR0FBR0MsUUFBUSxFQUF0QjtBQUVBLE1BQU1DLGFBQWEsR0FBR0YsS0FBSyxDQUFDRyxHQUFOLENBQVUsVUFBQ0MsSUFBRCxFQUFVO0FBQ3RDLFdBQU87QUFBSSxNQUFBLEdBQUcsRUFBRUEsSUFBSSxDQUFDQztBQUFkLE9BQW1CRCxJQUFJLENBQUNFLEtBQXhCLENBQVA7QUFDSCxHQUZxQixDQUF0QjtBQUlBLFNBQ0ksaUNBQ0ksd0NBREosRUFFSSxnQ0FBS0osYUFBTCxDQUZKLENBREo7QUFNSDs7QUFBQTthQUUrQkssSztJQUF4QkMsUSxVQUFBQSxRO0lBQVVDLFMsVUFBQUEsUzs7QUFFbEIsSUFBTVIsUUFBUSxHQUFHLFNBQVhBLFFBQVcsR0FBTTtBQUFBLGtCQUNLTyxRQUFRLENBQUMsRUFBRCxDQURiO0FBQUE7QUFBQSxNQUNkUixLQURjO0FBQUEsTUFDUFUsUUFETzs7QUFHckJELEVBQUFBLFNBQVMsQ0FBQyxZQUFNO0FBQ2RFLElBQUFBLEtBQUssK0NBQStDO0FBQ2xELGNBQVEsTUFEMEM7QUFFbEQscUJBQWU7QUFGbUMsS0FBL0MsQ0FBTCxDQUdHQyxJQUhILENBR1EsVUFBQUMsR0FBRztBQUFBLGFBQUlBLEdBQUcsQ0FBQ0MsSUFBSixFQUFKO0FBQUEsS0FIWCxFQUlDRixJQUpELENBSU0sVUFBQUcsSUFBSTtBQUFBLGFBQUlMLFFBQVEsQ0FBQ0ssSUFBRCxDQUFaO0FBQUEsS0FKVjtBQU1ELEdBUFEsRUFPTixFQVBNLENBQVQ7QUFTQSxTQUFPZixLQUFQO0FBQ0QsQ0FiRCIsInNvdXJjZXNDb250ZW50IjpbIlxuXG5cbmZ1bmN0aW9uIEFwcCgpIHtcbiAgICBjb25zdCBwb3N0cyA9IHVzZVBvc3RzKCk7XG4gICAgXG4gICAgY29uc3QgcmVuZGVyZWRQb3N0cyA9IHBvc3RzLm1hcCgocG9zdCkgPT4ge1xuICAgICAgICByZXR1cm4gPGxpIGtleT17cG9zdC5pZH0+e3Bvc3QudGl0bGV9PC9saT47XG4gICAgfSk7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgICAgPGRpdj5cbiAgICAgICAgICAgIDxoMz5Qb3N0czwvaDM+XG4gICAgICAgICAgICA8dWw+e3JlbmRlcmVkUG9zdHN9PC91bD5cbiAgICAgICAgPC9kaXY+XG4gICAgKTtcbn07XG5cbmNvbnN0IHsgdXNlU3RhdGUsIHVzZUVmZmVjdCB9ID0gUmVhY3Q7XG5cbmNvbnN0IHVzZVBvc3RzID0gKCkgPT4ge1xuICBjb25zdCBbcG9zdHMsIHNldFBvc3RzXSA9IHVzZVN0YXRlKFtdKTtcbiAgXG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgZmV0Y2goYGh0dHBzOi8vanNvbnBsYWNlaG9sZGVyLnR5cGljb2RlLmNvbS9wb3N0c2AsIHtcbiAgICAgIFwibW9kZVwiOiBcImNvcnNcIixcbiAgICAgIFwiY3JlZGVudGlhbHNcIjogXCJvbWl0XCJcbiAgICB9KS50aGVuKHJlcyA9PiByZXMuanNvbigpKVxuICAgIC50aGVuKGRhdGEgPT4gc2V0UG9zdHMoZGF0YSkpXG5cbiAgfSwgW10pO1xuXG4gIHJldHVybiBwb3N0cztcbn07XG5cbmV4cG9ydCBkZWZhdWx0IHVzZVBvc3RzOyJdfQ==</script></head><body><div id="app"><div><h3>Posts</h3><ul><li>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</li><li>qui est esse</li><li>ea molestias quasi exercitationem repellat qui ipsa sit aut</li><li>eum et est occaecati</li><li>nesciunt quas odio</li><li>dolorem eum magni eos aperiam quia</li><li>magnam facilis autem</li><li>dolorem dolore est ipsam</li><li>nesciunt iure omnis dolorem tempora et accusantium</li><li>optio molestias id quia eum</li><li>et ea vero quia laudantium autem</li><li>in quibusdam tempore odit est dolorem</li><li>dolorum ut in voluptas mollitia et saepe quo animi</li><li>voluptatem eligendi optio</li><li>eveniet quod temporibus</li><li>sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio</li><li>fugit voluptas sed molestias voluptatem provident</li><li>voluptate et itaque vero tempora molestiae</li><li>adipisci placeat illum aut reiciendis qui</li><li>doloribus ad provident suscipit at</li><li>asperiores ea ipsam voluptatibus modi minima quia sint</li><li>dolor sint quo a velit explicabo quia nam</li><li>maxime id vitae nihil numquam</li><li>autem hic labore sunt dolores incidunt</li><li>rem alias distinctio quo quis</li><li>est et quae odit qui non</li><li>quasi id et eos tenetur aut quo autem</li><li>delectus ullam et corporis nulla voluptas sequi</li><li>iusto eius quod necessitatibus culpa ea</li><li>a quo magni similique perferendis</li><li>ullam ut quidem id aut vel consequuntur</li><li>doloremque illum aliquid sunt</li><li>qui explicabo molestiae dolorem</li><li>magnam ut rerum iure</li><li>id nihil consequatur molestias animi provident</li><li>fuga nam accusamus voluptas reiciendis itaque</li><li>provident vel ut sit ratione est</li><li>explicabo et eos deleniti nostrum ab id repellendus</li><li>eos dolorem iste accusantium est eaque quam</li><li>enim quo cumque</li><li>non est facere</li><li>commodi ullam sint et excepturi error explicabo praesentium voluptas</li><li>eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis</li><li>optio dolor molestias sit</li><li>ut numquam possimus omnis eius suscipit laudantium iure</li><li>aut quo modi neque nostrum ducimus</li><li>quibusdam cumque rem aut deserunt</li><li>ut voluptatem illum ea doloribus itaque eos</li><li>laborum non sunt aut ut assumenda perspiciatis voluptas</li><li>repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem</li><li>soluta aliquam aperiam consequatur illo quis voluptas</li><li>qui enim et consequuntur quia animi quis voluptate quibusdam</li><li>ut quo aut ducimus alias</li><li>sit asperiores ipsam eveniet odio non quia</li><li>sit vel voluptatem et non libero</li><li>qui et at rerum necessitatibus</li><li>sed ab est est</li><li>voluptatum itaque dolores nisi et quasi</li><li>qui commodi dolor at maiores et quis id accusantium</li><li>consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere</li><li>voluptatem doloribus consectetur est ut ducimus</li><li>beatae enim quia vel</li><li>voluptas blanditiis repellendus animi ducimus error sapiente et suscipit</li><li>et fugit quas eum in in aperiam quod</li><li>consequatur id enim sunt et et</li><li>repudiandae ea animi iusto</li><li>aliquid eos sed fuga est maxime repellendus</li><li>odio quis facere architecto reiciendis optio</li><li>fugiat quod pariatur odit minima</li><li>voluptatem laborum magni</li><li>et iusto veniam et illum aut fuga</li><li>sint hic doloribus consequatur eos non id</li><li>consequuntur deleniti eos quia temporibus ab aliquid at</li><li>enim unde ratione doloribus quas enim ut sit sapiente</li><li>dignissimos eum dolor ut enim et delectus in</li><li>doloremque officiis ad et non perferendis</li><li>necessitatibus quasi exercitationem odio</li><li>quam voluptatibus rerum veritatis</li><li>pariatur consequatur quia magnam autem omnis non amet</li><li>labore in ex et explicabo corporis aut quas</li><li>tempora rem veritatis voluptas quo dolores vero</li><li>laudantium voluptate suscipit sunt enim enim</li><li>odit et voluptates doloribus alias odio et</li><li>optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut</li><li>dolore veritatis porro provident adipisci blanditiis et sunt</li><li>placeat quia et porro iste</li><li>nostrum quis quasi placeat</li><li>sapiente omnis fugit eos</li><li>sint soluta et vel magnam aut ut sed qui</li><li>ad iusto omnis odit dolor voluptatibus</li><li>aut amet sed</li><li>ratione ex tenetur perferendis</li><li>beatae soluta recusandae</li><li>qui qui voluptates illo iste minima</li><li>id minus libero illum nam ad officiis</li><li>quaerat velit veniam amet cupiditate aut numquam ut sequi</li><li>quas fugiat ut perspiciatis vero provident</li><li>laboriosam dolor voluptates</li><li>temporibus sit alias delectus eligendi possimus magni</li><li>at nam consequatur ea labore ea harum</li></ul></div></div>
+<script type="text/babel" data-presets="env,react" data-plugins="remove-import-export">
+
+
+function App() {
+    const posts = usePosts();
+    
+    const renderedPosts = posts.map((post) => {
+        return <li key={post.id}>{post.title}</li>;
+    });
+    
+    return (
+        <div>
+            <h3>Posts</h3>
+            <ul>{renderedPosts}</ul>
+        </div>
+    );
+};
+
+const { useState, useEffect } = React;
+
+const usePosts = () => {
+  const [posts, setPosts] = useState([]);
+  
+  useEffect(() => {
+    fetch(`https://jsonplaceholder.typicode.com/posts`, {
+      "mode": "cors",
+      "credentials": "omit"
+    }).then(res => res.json())
+    .then(data => setPosts(data))
+
+  }, []);
+
+  return posts;
+};
+
+export default usePosts;</script></body></html>
